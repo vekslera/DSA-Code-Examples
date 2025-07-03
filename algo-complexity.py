@@ -56,9 +56,8 @@ def factorial_with_recursion(n):
 
 
 def recursive_print(repeats):
-    if repeats > 0:
-        print("*")
-        recursive_print(repeats - 1)
+    print("*")
+    recursive_print(repeats - 1)
 
 
 if __name__ == '__main__':
