@@ -55,7 +55,10 @@ def factorial_with_recursion(n):
     return n * factorial_with_recursion(n - 1)
 
 
-
+def recursive_print(repeats):
+    if repeats > 0:
+        print("*")
+        recursive_print(repeats - 1)
 
 
 if __name__ == '__main__':
@@ -66,7 +69,10 @@ if __name__ == '__main__':
 
     #complexity_examples()
 
-    while n:
-        n = int(input("Enter a number to calculate its factorial (0 to exit): "))
-        print(f"{n}! = {factorial_without_recursion(n)} without recursion")
-        print(f"{n}! = {factorial_with_recursion(n)} with recursion")
+    #while n:
+    #    n = int(input("Enter a number to calculate its factorial (0 to exit): "))
+    #    print(f"{n}! = {factorial_without_recursion(n)} without recursion")
+    #    print(f"{n}! = {factorial_with_recursion(n)} with recursion")
+
+    n = int(input("Enter the number of print repeats: "))
+    recursive_print(n)
