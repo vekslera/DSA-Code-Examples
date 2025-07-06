@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e11704ec-2376-443b-a3b7-aa9aba1e7ea3" name="Changes" comment=" recursive print: problem reduction removed">
+    <list default="true" id="e11704ec-2376-443b-a3b7-aa9aba1e7ea3" name="Changes" comment=" recursive print: valid recursion restored">
+      <change afterPath="$PROJECT_DIR$/aaray-and-list.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,12 +39,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.aaray-and-list.executor": "Run",
     "Python.algo-complexity.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "recursiom",
+    "git-widget-placeholder": "array-list",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,6 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1751446858946</updated>
       <workItem from="1751446860012" duration="11143000" />
+      <workItem from="1751800875908" duration="7716000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -110,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751541840588</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=" recursive print: valid recursion restored">
+      <option name="closed" value="true" />
+      <created>1751801117136</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1751801117136</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,9 +144,11 @@
     <MESSAGE value=" recursive print added" />
     <MESSAGE value=" recursive print: stop condition removed" />
     <MESSAGE value=" recursive print: problem reduction removed" />
-    <option name="LAST_COMMIT_MESSAGE" value=" recursive print: problem reduction removed" />
+    <MESSAGE value=" recursive print: valid recursion restored" />
+    <option name="LAST_COMMIT_MESSAGE" value=" recursive print: valid recursion restored" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DSA_Examples$algo_complexity.coverage" NAME="algo-complexity Coverage Results" MODIFIED="1751535926471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DSA_Examples$aaray_and_list.coverage" NAME="aaray-and-list Coverage Results" MODIFIED="1751810402337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
