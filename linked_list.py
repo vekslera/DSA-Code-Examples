@@ -1,3 +1,6 @@
+from unittest import case
+
+
 class Node:
 
     def __init__(self, value):
@@ -70,6 +73,28 @@ class LinkedList:
                 temp = temp.next
             self.insert_after(node, temp)
 
+    def get(self, location):
+        if self.is_empty():
+            return None
+        if type(location) == str:
+            match location:
+                case "head":
+                    return self.head.value
+                case "tail":
+                    return self.tail.value
+                case _: return None
+        if type(location) == int:
+            return self.get_by_index(location)
+        return None
+
+    def get_by_index(self, index):
+        if index < 0 or index >= self.size:
+            return None
+        temp = self.head
+        for i in range(index-1):
+            temp = temp.next
+        return temp
+
     def search_by_value(self, value):
         temp = self.head
         index = 0
@@ -79,14 +104,6 @@ class LinkedList:
             temp = temp.next
             index += 1
         return None
-
-    def search_by_index(self, index):
-        if index < 0 or index >= self.size:
-            return None
-        temp = self.head
-        for i in range(index-1):
-            temp = temp.next
-        return temp
 
     def update_by_index(self, index, new_value):
         if index < 0 or index >= self.size:
@@ -190,7 +207,7 @@ if __name__ == "__main__":
     print(linked_list)
     linked_list.remove("tail")
     print(linked_list)
-    my_node = linked_list.search_by_index(3)
+    my_node = linked_list.get_by_index(3)
     linked_list.remove(my_node)
     print(linked_list)
     linked_list.remove(2)
