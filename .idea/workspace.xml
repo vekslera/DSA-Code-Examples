@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e11704ec-2376-443b-a3b7-aa9aba1e7ea3" name="Changes" comment="Arrays separated from lists">
+    <list default="true" id="e11704ec-2376-443b-a3b7-aa9aba1e7ea3" name="Changes" comment="linked list functions working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arrays.py" beforeDir="false" afterPath="$PROJECT_DIR$/arrays.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/linked_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/linked_list.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1751446858946</updated>
       <workItem from="1751446860012" duration="11143000" />
-      <workItem from="1751800875908" duration="23168000" />
+      <workItem from="1751800875908" duration="25517000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -155,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751887143638</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="linked list functions working">
+      <option name="closed" value="true" />
+      <created>1751892538438</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1751892538438</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,11 +190,12 @@
     <MESSAGE value="minor naming correction" />
     <MESSAGE value="linked list operations added" />
     <MESSAGE value="Arrays separated from lists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arrays separated from lists" />
+    <MESSAGE value="linked list functions working" />
+    <option name="LAST_COMMIT_MESSAGE" value="linked list functions working" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DSA_Examples$algo_complexity.coverage" NAME="algo-complexity Coverage Results" MODIFIED="1751535926471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DSA_Examples$aaray_and_list.coverage" NAME="aaray-and-list Coverage Results" MODIFIED="1751810402337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DSA_Examples$linked_list.coverage" NAME="linked_list Coverage Results" MODIFIED="1751892412094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DSA_Examples$linked_list.coverage" NAME="linked_list Coverage Results" MODIFIED="1751897422107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

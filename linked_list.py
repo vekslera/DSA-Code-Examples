@@ -106,6 +106,23 @@ class LinkedList:
             temp = temp.next
         return None
 
+    def remove(self, location="head"):
+        if self.is_empty():
+            return None
+        if type(location) == str:
+            match location:
+                case "head":
+                    return self.remove_from_head()
+                case "tail":
+                    return self.remove_from_tail()
+                case _: return None
+        if type(location) == int:
+            return self.remove_by_index(location)
+        if type(location) == Node:
+            return self.remove_after_node(location)
+        return None
+
+
     def remove_from_head(self):
         if self.is_empty():
             return None
@@ -166,6 +183,15 @@ if __name__ == "__main__":
     print(linked_list)
     linked_list.update_by_index(3, 3)
     print(linked_list)
-    node = linked_list.search_by_value(3)
-    linked_list.insert(4, node)
+    my_node = linked_list.search_by_value(3)
+    linked_list.insert(4, my_node)
+    print(linked_list)
+    linked_list.remove()
+    print(linked_list)
+    linked_list.remove("tail")
+    print(linked_list)
+    my_node = linked_list.search_by_index(3)
+    linked_list.remove(my_node)
+    print(linked_list)
+    linked_list.remove(2)
     print(linked_list)
