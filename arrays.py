@@ -14,7 +14,7 @@ class Array:
     def size(self):
         return self.arr.size
 
-    def get_by_index(self, index):
+    def search_by_index(self, index):
         if index < 0 or index >= self.size:
             return None
         return self.arr[index]
@@ -62,7 +62,7 @@ class DynArray:
             self.lst.insert(index, value)
         return index
 
-    def get_by_index(self, index):
+    def search_by_index(self, index):
         if index < 0 or index >= self.size:
             return None
         return self.lst[index]
@@ -101,7 +101,7 @@ if __name__ == "__main__":
     arr2 = Array([i for i in range(arr_size)])
     print(arr2)
     for i in range(arr_size):
-        arr1.update(i, arr2.get_by_index(i))
+        arr1.update(i, arr2.search_by_index(i))
     print(arr1)
 
     dyn_arr1 = DynArray()

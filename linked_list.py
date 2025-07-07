@@ -5,7 +5,7 @@ class Node:
         self.next = None
 
     def __str__(self):
-        return f"{self.value} ==> {self.next}"
+        return f"{self.value} ==> "
 
 class LinkedList:
 
@@ -25,7 +25,7 @@ class LinkedList:
         new_node = Node(value)
         if self.is_empty():
             self.insert_at_empty(new_node)
-        if type(location) == str:
+        elif type(location) == str:
             match location:
                 case "head":
                     self.insert_at_head(new_node)
@@ -46,6 +46,7 @@ class LinkedList:
         self.head = node
 
     def insert_at_tail(self, node):
+        self.tail.next = node
         self.tail = node
 
     def insert_at_empty(self, node):
@@ -65,7 +66,7 @@ class LinkedList:
             self.insert_at_tail(node)
         else:
             temp = self.head
-            for i in range(index):
+            for i in range(index-1):
                 temp = temp.next
             self.insert_after(node, temp)
 
@@ -74,7 +75,7 @@ class LinkedList:
         index = 0
         while not temp is None:
             if temp.value == value:
-                return index
+                return temp
             temp = temp.next
             index += 1
         return None
@@ -83,9 +84,9 @@ class LinkedList:
         if index < 0 or index >= self.size:
             return None
         temp = self.head
-        for i in range(index):
+        for i in range(index-1):
             temp = temp.next
-        return temp.value
+        return temp
 
     def update_by_index(self, index, new_value):
         if index < 0 or index >= self.size:
@@ -105,33 +106,66 @@ class LinkedList:
             temp = temp.next
         return None
 
-    def delete_from_head(self):
-        if self.is_empty():
-            return None
-        value = self.head.value
-        self.head = self.head.next
-        self._size -= 1
-        return value
-
-    def delete_from_tail(self):
+    def remove_from_head(self):
         if self.is_empty():
             return None
         temp = self.head
-        value = self.tail.value
+        self.head = self.head.next
+        self._size -= 1
+        return temp
+
+    def remove_from_tail(self):
+        if self.is_empty():
+            return None
+        temp = self.head
         while not temp.next is None and not temp.next.next is None:
             temp = temp.next
         self.tail = temp
+        temp = temp.next
         self.tail.next = None
         self._size -= 1
-        return value
+        return temp
 
-    def delete_by_index(self, index):
+    def remove_by_index(self, index):
         if index < 0 or index >= self.size:
             return None
         temp = self.head
-        for i in range(index):
+        for i in range(index-1):
             temp = temp.next
-        value = temp.next.value
-        temp.next = temp.next.next
+        return self.remove_after_node(temp)
+
+    def remove_after_node(self, node):
+        if node is None or node.next is None:
+            return None
+        temp = node.next
+        node.next = node.next.next
         self._size -= 1
-        return value
+        return temp
+
+    def __str__(self):
+        temp = self.head
+        s = ""
+        while not temp is None:
+            s += str(temp)
+            temp = temp.next
+        return s
+
+
+if __name__ == "__main__":
+    linked_list = LinkedList()
+    print(linked_list)
+    linked_list.insert(1)
+    print(linked_list)
+    linked_list.insert(2, "tail")
+    print(linked_list)
+    linked_list.insert(0, "head")
+    print(linked_list)
+    linked_list.insert(5, "tail")
+    print(linked_list)
+    linked_list.insert('c', 3)
+    print(linked_list)
+    linked_list.update_by_index(3, 3)
+    print(linked_list)
+    node = linked_list.search_by_value(3)
+    linked_list.insert(4, node)
+    print(linked_list)
